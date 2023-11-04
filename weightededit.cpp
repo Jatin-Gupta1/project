@@ -22,12 +22,12 @@ int editDistDP(char* str1, char* str2, int m, int n ,int wi , int wd , int ws)
 			// If first string is empty, only option is to
 			// insert all characters of second string
 			if (i == 0)
-				dp[i][j] = j + wi; // Min. operations = j
+				dp[i][j] = j * wi; // Min. operations = j
 
 			// If second string is empty, only option is to
 			// remove all characters of second string
 			else if (j == 0)
-				dp[i][j] = i + wd; // Min. operations = i
+				dp[i][j] = i * wd; // Min. operations = i
 
 			// If last characters are same, ignore last char
 			// and recur for remaining string
